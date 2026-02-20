@@ -26,25 +26,32 @@
 
 ## ⚙️ Встановлення
 
-1. **Клонуй репозиторій:**
-   ```bash
-   git clone https://github.com/username/excel-pdf-bot.git
-   cd excel-pdf-bot
-   
-2. **Створи віртуальне середовище:**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # для Linux / Mac
-    venv\Scripts\activate     # для Windows
-
-3. **Встанови залежності:**
-    ```bash
-    pip install -r requirements.txt
-
-4. **Створи .env файл з токеном Telegram-бота:**
-    ```bash
-    TOKEN=тут_твій_токен_бота
-
+1. **Стандартне встановлення**
+    1. **Клонуй репозиторій:**
+       ```bash
+       git clone https://github.com/username/excel-pdf-bot.git
+       cd excel-pdf-bot
+    2. **Створи віртуальне середовище:**
+        ```bash
+        python -m venv venv
+        source venv/bin/activate  # для Linux / Mac
+        venv\Scripts\activate     # для Windows
+    3. **Встанови залежності:**
+        ```bash
+        pip install -r requirements.txt
+    4. **Створи .env файл з токеном Telegram-бота:**
+        ```bash
+        TOKEN=тут_твій_токен_бота
+2. **Через Docker**
+    1. **Створи .env файл**
+        ```bash
+        TOKEN=<ТВІЙ ТОКЕН>
+    2. **Збери образ**
+        ```bash
+        docker build -t ecxel-to-pdf-python-telegrambot:1.0 . 
+    3. **Запусти**
+        ```bash
+        docker run --env-file .env ecxel-to-pdf-python-telegrambot:1.0
 ---
 
 ## ▶️ Запуск
@@ -64,16 +71,5 @@
 
 ---
 
-## 📁 Структура проєкту
-    ```bash
-    excel-pdf-bot/
-    │
-    ├── main.py                # Основний код бота
-    ├── requirements.txt       # Залежності Python
-    ├── assets/
-    │   └── temp/              # Тимчасові файли (.xlsx і .pdf)
-    └── README.md              # Цей файл
 
----
-
-## 📅 Версія: 1.0.0
+## 📅 Версія: 1.0.1
